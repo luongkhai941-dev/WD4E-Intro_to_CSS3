@@ -1,4 +1,45 @@
-body{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 150%;
+/* 1. Thẻ body: Thiết lập phông chữ gốc và kích thước cơ sở cho toàn trang DOM */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Sử dụng font không chân (sans-serif) để dễ đọc trên màn hình điện thoại/máy tính */
+    font-size: 16px; /* Kích thước chữ tiêu chuẩn */
+}
+
+/* 2. Thẻ header: Phần đầu trang */
+header {
+    background-color: #e3f2fd; /* Sử dụng mã màu HEX để có độ chính xác cao nhất */
+}
+
+/* 3. Thẻ nav: Thanh điều hướng */
+nav {
+    background-color: #1565c0;
+}
+
+/* 4. Thẻ main: Nội dung chính */
+main {
+    background-color: #ffffff;
+    font-size: 18px; /* Ghi đè (Override) kích thước chữ của body để làm nổi bật nội dung chính */
+}
+
+/* 5. Thẻ footer: Phần chân trang */
+footer {
+    background-color: #eeeeee;
+}
+
+/* 6. Thẻ li: Các mục trong danh sách (thường dùng trong thanh nav) */
+/* YÊU CẦU BẮT BUỘC TỪ ĐỀ BÀI: Phải có thuộc tính display và width */
+li {
+    display: inline-block; /* Chuyển từ hiển thị khối (block - xếp dọc) sang hiển thị trên cùng một hàng ngang nhưng vẫn giữ được khả năng đặt kích thước */
+    width: 150px; /* Đặt chiều rộng cố định cho mỗi mục menu */
+}
+
+/* 7. Thẻ h1: Tiêu đề chính */
+h1 {
+    text-align: center; /* Căn giữa */
+    font-family: "Georgia", serif; /* Dùng font có chân (serif) để tạo điểm nhấn cho tiêu đề */
+    color: #0d47a1; 
+}
+
+/* 8. Thẻ p: Đoạn văn bản */
+p {
+    line-height: 1.5; /* Tạo khoảng cách giữa các dòng văn bản (gấp 1.5 lần kích thước chữ) giúp tối ưu trải nghiệm đọc (UX) */
 }
