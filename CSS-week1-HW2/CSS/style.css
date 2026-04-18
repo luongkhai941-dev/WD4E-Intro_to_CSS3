@@ -1,46 +1,37 @@
-
-/* 1. Thẻ body: Thiết lập phông chữ gốc và kích thước cơ sở cho toàn trang DOM */
-body {
-    font-family: Arial, Helvetica, sans-serif; /* Sử dụng font không chân (sans-serif) để dễ đọc trên màn hình điện thoại/máy tính */
-    font-size: 16px; /* Kích thước chữ tiêu chuẩn */
-}
-
-/* 2. Thẻ header: Phần đầu trang */
-header {
-    background-color: #e3f2fd; /* Sử dụng mã màu HEX để có độ chính xác cao nhất */
-}
-
-/* 3. Thẻ nav: Thanh điều hướng */
-nav {
-    background-color: #1565c0;
-}
-
-/* 4. Thẻ main: Nội dung chính */
-main {
-    background-color: #ffffff;
-    font-size: 18px; /* Ghi đè (Override) kích thước chữ của body để làm nổi bật nội dung chính */
-}
-
-/* 5. Thẻ footer: Phần chân trang */
-footer {
-    background-color: #eeeeee;
-}
-
-/* 6. Thẻ li: Các mục trong danh sách (thường dùng trong thanh nav) */
-/* YÊU CẦU BẮT BUỘC TỪ ĐỀ BÀI: Phải có thuộc tính display và width */
+/* 1. Vô hiệu hóa thẻ li cũ (Dùng dấu /* ... */ để comment) */
+/*
 li {
-    display: inline-block; /* Chuyển từ hiển thị khối (block - xếp dọc) sang hiển thị trên cùng một hàng ngang nhưng vẫn giữ được khả năng đặt kích thước */
-    width: 150px; /* Đặt chiều rộng cố định cho mỗi mục menu */
+    display: inline-block;
+    width: 150px;
+}
+*/
+
+/* 2. Định dạng thanh điều hướng (nav) và ảnh bên trong nó */
+nav {
+    display: inline-block;
+    width: 80%;
 }
 
-/* 7. Thẻ h1: Tiêu đề chính */
-h1 {
-    text-align: center; /* Căn giữa */
-    font-family: "Georgia", serif; /* Dùng font có chân (serif) để tạo điểm nhấn cho tiêu đề */
-    color: #0d47a1; 
+nav img {
+    width: 10%; /* Ảnh logo/biểu tượng trong thanh nav thu nhỏ lại 10% */
 }
 
-/* 8. Thẻ p: Đoạn văn bản */
-p {
-    line-height: 1.5; /* Tạo khoảng cách giữa các dòng văn bản (gấp 1.5 lần kích thước chữ) giúp tối ưu trải nghiệm đọc (UX) */
+/* 3. Thiết lập bố cục Lưới (Grid) cho trang Neighborhood */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%; /* 2 cột, mỗi cột 40% */
+    justify-content: space-evenly; /* Căn chỉnh khoảng cách giữa các cột */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    row-gap: 20px; /* Khoảng cách giữa các hàng */
+}
+
+.grid img {
+    width: 100%; /* Đảm bảo ảnh chiếm trọn 100% không gian của cột 40% đó */
+}
+
+/* 4. Thiết lập bố cục Linh hoạt (Flexbox) cho trang Parks */
+.flex {
+    display: flex;
+    flex-wrap: wrap; /* Tự động rớt dòng khi hết chỗ ngang */
+    justify-content: space-around; /* Phân bổ khoảng trống đều nhau */
 }
